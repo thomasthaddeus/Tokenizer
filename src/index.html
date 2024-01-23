@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Text Truncator with File Upload</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h3>Token Limit</h3>
+      <input type="number" id="maxTokens" placeholder="Max tokens (default 7000)" />
+      <input type="file" id="fileInput" />
+      <div class="separator"></div>
+      <h3>Cleaning Options</h3>
+      <div class="checkbox-container">
+        <input type="checkbox" id="lowercase">
+        <label for="lowercase">Convert to Lowercase</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="removeSpecialChars">
+        <label for="removeSpecialChars">Remove Special Characters</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="removeNumbers">
+        <label for="removeNumbers">Remove Numbers</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="removePunctuation">
+        <label for="removePunctuation">Remove Punctuation</label>
+      </div>
+      <div class="checkbox-container">
+        <input type="checkbox" id="removeEmojis">
+        <label for="removeEmojis">Remove Emojis</label>
+      </div>
+      <div class="separator"></div>
+      <div class="button-container">
+        <button id="cleanButton">Clean Text</button>
+        <button id="truncateButton">Truncate Text</button>
+      </div>
+    </div>
+    <div class="main-content">
+      <h2>Text Truncator with File Upload</h2>
+
+      <div class="text-areas">
+        <div class="input-area">
+          <textarea id="inputText" rows="10" placeholder="Or enter text here..."></textarea>
+        </div>
+        <div class="output-area">
+          <details>
+            <summary>Truncated Text</summary>
+            <textarea id="outputText" rows="10" readonly></textarea>
+          </details>
+        </div>
+      </div>
+
+      <div class="cut-off-area">
+        <details>
+          <summary>Text Cut Off</summary>
+          <textarea id="cutOffText" rows="10" readonly></textarea>
+        </details>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
+</html>

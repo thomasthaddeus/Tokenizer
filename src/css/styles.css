@@ -1,0 +1,173 @@
+/* General Reset and Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: #ffcc00;
+}
+
+.sidebar input[type="number"],
+.sidebar input[type="file"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  margin-bottom: 10px;
+}
+
+.checkbox-container label {
+  margin-left: 5px;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.main-content h2 {
+  color: #333;
+}
+
+textarea {
+  width: 80%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+/* Button Styles */
+button {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e6b800;
+}
+
+/* HR and Separator Styles */
+hr,
+.separator {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.text-areas {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.input-area,
+.output-area {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.output-area {
+  margin-right: 0;
+}
+
+.cut-off-area {
+  clear: both;
+}
+
+/* Adjusting styles for smaller screens */
+@media (max-width: 768px) {
+  .text-areas {
+    flex-direction: column;
+  }
+
+  .input-area,
+  .output-area {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* Details and Summary Styles */
+details {
+  width: 80%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+summary {
+  width: 100%;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary::after {
+  content: '▲';
+  float: right;
+}
+
+details:not([open]) summary::after {
+  content: '▼';
+  float: right;
+}
+
+details textarea {
+  border: none;
+  margin-top: 10px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhancing the appearance of readonly textareas */
+details textarea[readonly] {
+  background-color: #f9f9f9;
+  color: #666;
+}
