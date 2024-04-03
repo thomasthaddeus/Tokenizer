@@ -1,4 +1,4 @@
-// eventBinders.js
+// ts.eventBinders.js
 import { handleCleanText, handleTruncateText } from './.handlers/handlers.js';
 
 export function bindCleanButton(buttonSelector, inputSelector) {

@@ -1,4 +1,4 @@
-// main.js
+// js/main.js
 import { bindCleanButton, bindTruncateButton } from './eventBinders.js';
 
 document.addEventListener('DOMContentLoaded', () => {
