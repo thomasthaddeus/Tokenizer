@@ -1,5 +1,5 @@
 // Import the functions you want to test
-const { cleanText, truncateTokens } = require('../js/');
+import { cleanText, truncateTokens } from '../js/utils/textUtils';
 
 describe('Text processing tests', () => {
   it('should clean text correctly', () => {

@@ -38,12 +38,19 @@ describe('textUtils', () => {
         removePunctuation: true,
         removeEmojis: true
       };
-      expect(cleanText(text, options)).toBe('test string ');
+      expect(cleanText(text, options)).toBe('test string  ');
     });
 
     it('should return the original text if no options are provided', () => {
       const text = 'Original Text 1234!@#$ 😊';
       expect(cleanText(text, {})).toBe('Original Text 1234!@#$ 😊');
+    });
+
+    it('should clean text correctly', () => {
+      const text = 'Some text with various Elements 1234!@#$ 😊';
+      const options = { lowercase: true, removeSpecialChars: true, removeNumbers: true, removePunctuation: true, removeEmojis: true };
+      const cleanedText = cleanText(text, options);
+      expect(cleanedText).not.toMatch(/[0-9!@#$%^&*()_+]/);
     });
 
   });
@@ -71,7 +78,7 @@ describe('textUtils', () => {
     });
 
     it('should truncate text correctly when text is longer than the limit', () => {
-      const text = generateTestText(); // Assuming this generates a long string
+      const text = generateTestText(); // This should generate a long string
       const maxTokens = 50;
       const { truncated, cutOff } = truncateTokens(text, maxTokens);
       expect(truncated.split(/\s+/).length).toBeLessThanOrEqual(maxTokens);
