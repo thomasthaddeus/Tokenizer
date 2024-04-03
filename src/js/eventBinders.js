@@ -1,5 +1,5 @@
 // eventBinders.js
-import { handleCleanText, handleTruncateText } from './handlers.js';
+import { handleCleanText, handleTruncateText } from './.handlers/handlers.js';
 
 export function bindCleanButton(buttonSelector, inputSelector) {
   const button = document.querySelector(buttonSelector);

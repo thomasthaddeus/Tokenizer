@@ -1,5 +1,5 @@
 // handlers.js
-import { cleanText, truncateTokens } from './textUtils.js';
+import { cleanText, truncateTokens } from '../utils/textUtils.js';
 
 export function handleCleanText(inputSelector, options) {
   const inputText = document.querySelector(inputSelector).value;

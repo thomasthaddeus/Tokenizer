@@ -1,6 +1,6 @@
 // textUtils.test.js
-import { cleanText, truncateTokens } from '../js/textUtils';
-import { generateTestText } from '../js/testUtils';
+import { cleanText, truncateTokens } from '../js/utils/textUtils';
+import { generateTestText } from '../js/utils/testUtils';
 
 describe('textUtils', () => {
   describe('cleanText', () => {
