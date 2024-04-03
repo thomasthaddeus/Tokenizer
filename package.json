@@ -1,0 +1,30 @@
+{
+  "name": "tokenizer",
+  "version": "1.0.0",
+  "description": "A web application for truncating text and cleaning it based on user preferences.",
+  "main": "index.html",
+  "scripts": {
+    "start": "open index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasthaddeus/tokenizer.git"
+  },
+  "keywords": [
+    "text",
+    "truncator",
+    "file upload",
+    "cleaning",
+    "tokenizer"
+  ],
+  "author": "Thaddeus Thomas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomasthaddeus/tokenizer/issues"
+  },
+  "homepage": "https://github.com/thomasthaddeus/tokenizer#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

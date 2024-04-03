@@ -1,4 +1,4 @@
-function generateTestText() {
+export function generateTestText() {
   const lowerCaseText = "this is a lowercase string. ";
   const upperCaseText = "THIS IS AN UPPERCASE STRING. ";
   const numberString = "123 456 7890 ";
