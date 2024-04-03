@@ -1,4 +1,4 @@
-// textUtils.js
+// utils/textUtils.js
 export function cleanText(text, options) {
   if (options.lowercase) {
     text = text.toLowerCase();

@@ -151,12 +151,12 @@ summary::-webkit-details-marker {
 }
 
 details[open] summary::after {
-  content: '▲';
+  content: "▲";
   float: right;
 }
 
 details:not([open]) summary::after {
-  content: '▼';
+  content: "▼";
   float: right;
 }
 

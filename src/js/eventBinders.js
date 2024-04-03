@@ -1,5 +1,5 @@
-// ts.eventBinders.js
-import { handleCleanText, handleTruncateText } from './.handlers/handlers.js';
+// eventBinders.js
+import { handleCleanText, handleTruncateText, handleFileRead } from './.handlers/handlers.js';
 
 export function bindCleanButton(buttonSelector, inputSelector) {
   const button = document.querySelector(buttonSelector);
@@ -24,4 +24,10 @@ export function bindTruncateButton(buttonSelector, inputSelector, outputSelector
     document.querySelector(outputSelector).value = result.truncated;
     document.querySelector('#cutOffText').value = result.cutOff; // Assuming #cutOffText is the id for cut-off text area
   });
+}
+
+
+export function bindFileInput(fileInputSelector, inputSelector) {
+    const fileInput = document.querySelector(fileInputSelector);
+    fileInput.addEventListener('change', handleFileRead(inputSelector));
 }
