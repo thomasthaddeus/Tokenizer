@@ -16,7 +16,7 @@ body {
 
 /* Sidebar Styles */
 .sidebar {
-  width: 350px;
+  width: 30%;
   min-width: auto;
   background-color: #333;
   color: white;

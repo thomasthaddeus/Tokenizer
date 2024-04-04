@@ -1,5 +1,3 @@
-To update your HTML to use Bootstrap 5 and align with its class structure, you need to include the Bootstrap 5 CSS in your `<head>` section and possibly adjust the class names used in your HTML to match Bootstrap's styling conventions.
-
 1. **Include Bootstrap 5 CSS:**
    Replace your custom CSS link with Bootstrap's CSS if you want to fully use Bootstrap styles, or add it additionally if you want to use both.
 
@@ -13,8 +11,6 @@ To update your HTML to use Bootstrap 5 and align with its class structure, you n
 
 2. **Adjust HTML with Bootstrap 5 classes:**
    Without changing your layout logic, here's how you might adjust the classes to fit into Bootstrap's system. I'm not changing class names fundamentally but will list them out to consider Bootstrap components' styling where applicable.
-
-Here’s your updated HTML structure with consideration for Bootstrap 5 classes:
 
 ```html
 <!DOCTYPE html>
