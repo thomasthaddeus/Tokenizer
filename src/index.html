@@ -38,13 +38,18 @@
         <label for="removeEmojis" class="form-check-label">Remove Emojis</label>
       </div>
       <hr class="separator" />
+
       <h3>Stats</h3>
-      <button id="wordCountButton" class="btn btn-info">Count Words</button>
-      <button id="charCountButton" class="btn btn-info">Count Characters</button>
+      <button id="wordCountButton" class="btn btn-info">Word Count</button>
+      <button id="charCountButton" class="btn btn-info">Character Count</button>
       <div id="statsOutput" class="mt-2"></div>
+      <div id="outputStats" class="stats-output"></div>
+
       <h3>Transformations</h3>
       <button id="toUpperCaseButton" class="btn btn-info">To Uppercase</button>
       <hr class="separator" />
+      <div id="outputTransformations" class="transform-output"></div>
+
       <h3>Find & Replace</h3>
       <input type="text" id="findText" class="form-control mt-2" placeholder="Find text">
       <input type="text" id="replaceText" class="form-control mt-2" placeholder="Replace with">
@@ -55,6 +60,8 @@
         <button id="truncateButton" class="btn btn-secondary">Truncate Text</button>
       </div>
     </div>
+
+    <!-- Main Content Section -->
     <main class="main-content">
       <h2>Text Truncator with File Upload</h2>
       <div class="text-areas d-flex">
@@ -78,6 +85,18 @@
       </div>
     </main>
   </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-dark text-white mt-4 p-3">
+    <div class="text-center">
+      <h5>Resources</h5>
+      <div class="footer-links" style="display: flex; justify-content: center; gap: 10px;">
+        <a href="./pages/documentation.html" class="text-white">Documentation</a>
+        <a href="./pages/help.html" class="text-white">Help</a>
+      </div>
+    </div>
+  </footer>
+
   <script type="module" src="./js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

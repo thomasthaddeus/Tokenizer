@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f4f4f4;
+  background-color: #fbf9c1;
   color: #333;
 }
 
@@ -24,6 +24,8 @@ body {
 
 .sidebar h3 {
   margin-top: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
   color: #ffcc00;
 }
 
@@ -44,6 +46,12 @@ body {
   margin-left: 5px;
 }
 
+/* Footer Styles */
+.footer-links a {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 /* Main Content Styles */
 .main-content {
   flex-grow: 1;
@@ -55,7 +63,7 @@ body {
 }
 
 textarea {
-  width: 80%;
+  width: 100%;
   padding: 20px;
   margin-bottom: 20px;
   border: 1px solid #ccc;
@@ -64,7 +72,7 @@ textarea {
 }
 
 /* Button Styles */
-button {
+.btn {
   background-color: #ffcc00;
   color: #333;
   border: none;
@@ -75,7 +83,7 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.btn:hover {
   background-color: #e6b800;
 }
 
@@ -132,7 +140,7 @@ hr,
 
 /* Details and Summary Styles */
 details {
-  width: 80%;
+  width: 100%;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 10px;
@@ -147,8 +155,8 @@ summary {
   outline: none;
 }
 
-summary::-webkit-details-marker {
-  display: none;
+details summary::-webkit-details-marker {
+  display: none; /* Hide default icons to avoid strange text */
 }
 
 details[open] summary::after {

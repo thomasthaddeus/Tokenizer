@@ -3,6 +3,10 @@ import {
   handleCleanText,
   handleTruncateText,
   handleFileRead,
+  handleCharacterCount,
+  handleFindAndReplace,
+  handleTextToUpper,
+  handleWordCount,
 } from "./.handlers/handlers.js";
 
 export function bindCleanButton(buttonSelector, inputSelector) {
@@ -58,4 +62,21 @@ export function bindTextStatisticsButtons(
   );
 }
 
-// Define similar bindings for toUpperCase and findAndReplace if needed
+export function bindTextToUpperButton(
+  textToUpperButtonSelector,
+  inputSelector,
+  outputSelector
+) {
+  const textToUpperButton = document.querySelector(textToUpperButtonSelector);
+  textToUpperButton.addEventListener("click", () =>
+    handleTextToUpper(inputSelector, outputSelector)
+  );
+}
+
+export function bindReplaceTextButton(
+  inputSelector,
+  outputSelector
+) {
+  const replaceTextButton
+}
+// handleFindAndReplace
