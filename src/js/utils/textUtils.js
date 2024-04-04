@@ -31,3 +31,19 @@ export function truncateTokens(text, maxTokens = 7000) {
     cutOff: tokens.slice(maxTokens).join(" "),
   };
 }
+
+export function countWords(text) {
+  return text.split(/\s+/).filter(Boolean).length; // Filter out empty strings in the array
+}
+
+export function countCharacters(text) {
+  return text.length;
+}
+
+export function toUpperCase(text) {
+  return text.toUpperCase();
+}
+
+export function findAndReplace(text, findText, replaceText) {
+  return text.replace(new RegExp(findText, "g"), replaceText);
+}
