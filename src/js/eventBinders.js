@@ -24,25 +24,48 @@ export function bindCleanButton(buttonSelector, inputSelector) {
   });
 }
 
-export function bindTruncateButton(
+export function bindFileInput(
+  fileInputSelector,
+  inputSelector,
+  progressSelector,
+  feedbackSelector
+) {
+  const fileInput = document.querySelector(fileInputSelector);
+  fileInput.addEventListener(
+    "change",
+    handleFileRead(inputSelector, progressSelector, feedbackSelector)
+  );
+}
+
+export function bindFindAndReplace(
   buttonSelector,
   inputSelector,
-  outputSelector,
-  maxTokensSelector
+  findTextSelector,
+  replaceTextSelector,
+  outputSelector
 ) {
-  const button = document.querySelector(buttonSelector);
-  button.addEventListener("click", () => {
-    const maxTokens =
-      parseInt(document.querySelector(maxTokensSelector).value) || 7000;
-    const result = handleTruncateText(inputSelector, maxTokens);
-    document.querySelector(outputSelector).value = result.truncated;
-    document.querySelector("#cutOffText").value = result.cutOff; // Assuming #cutOffText is the id for cut-off text area
+  const findReplaceButton = document.querySelector(buttonSelector);
+  findReplaceButton.addEventListener("click", () => {
+    const findText = document.querySelector(findTextSelector).value;
+    const replaceText = document.querySelector(replaceTextSelector).value;
+    const newText = handleFindAndReplace(inputSelector, findText, replaceText);
+    document.querySelector(outputSelector).value = newText;
   });
 }
 
-export function bindFileInput(fileInputSelector, inputSelector) {
-  const fileInput = document.querySelector(fileInputSelector);
-  fileInput.addEventListener("change", handleFileRead(inputSelector));
+export function bindReplaceTextButton(
+  buttonSelector,
+  inputSelector,
+  findTextSelector,
+  replaceTextSelector
+) {
+  const replaceTextButton = document.querySelector(buttonSelector);
+  replaceTextButton.addEventListener("click", () => {
+    const findText = document.querySelector(findTextSelector).value;
+    const replaceText = document.querySelector(replaceTextSelector).value;
+    const newText = handleFindAndReplace(inputSelector, findText, replaceText);
+    document.querySelector(inputSelector).value = newText;
+  });
 }
 
 export function bindTextStatisticsButtons(
@@ -73,10 +96,18 @@ export function bindTextToUpperButton(
   );
 }
 
-export function bindReplaceTextButton(
+export function bindTruncateButton(
+  buttonSelector,
   inputSelector,
-  outputSelector
+  outputSelector,
+  maxTokensSelector
 ) {
-  const replaceTextButton
+  const button = document.querySelector(buttonSelector);
+  button.addEventListener("click", () => {
+    const maxTokens =
+      parseInt(document.querySelector(maxTokensSelector).value) || 7000;
+    const result = handleTruncateText(inputSelector, maxTokens);
+    document.querySelector(outputSelector).value = result.truncated;
+    document.querySelector("#cutOffText").value = result.cutOff; // Assuming #cutOffText is the id for cut-off text area
+  });
 }
-// handleFindAndReplace

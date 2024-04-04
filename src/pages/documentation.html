@@ -1,1 +1,97 @@
 <!-- pages/documentation.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Documentation - Text Truncator with File Upload</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container my-5">
+    <header>
+      <h1 class="text-center mb-4">Documentation</h1>
+    </header>
+
+    <section class="mb-5">
+      <h2>Overview</h2>
+      <p>
+        The Text Truncator with File Upload application is designed to provide users with tools to manipulate text data
+        efficiently. This document provides detailed information on each feature and guides on how to use them.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Token Limit:</strong> Allows users to set a limit on the number of words (tokens) to include in the
+          processed text.</li>
+        <li><strong>File Upload:</strong> Users can upload text files from which the text is extracted and displayed in
+          the input area for processing.</li>
+        <li><strong>Cleaning Options:</strong> Multiple options are provided to strip unnecessary or unwanted text
+          components, such as special characters, numbers, punctuation, or emojis.</li>
+      </ul>
+    </section>
+
+    <section class="mb-5">
+      <h2>Getting Started</h2>
+      <h3>File Upload</h3>
+      <p>
+        To upload a text file:
+      <ol>
+        <li>Click the "Choose File" button to browse and select a file from your local system.</li>
+        <li>Once a file is selected, its contents will automatically be loaded into the input area.</li>
+      </ol>
+      </p>
+      <h3>Setting Token Limit</h3>
+      <p>
+        Define the maximum number of tokens for the truncation process in the "Max tokens" field. If left blank, the
+        default value of 7000 tokens is used.
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h2>Text Cleaning Options</h2>
+      <p>
+        The application offers various cleaning options that can be selected before processing the text:
+      <ul>
+        <li><strong>Convert to Lowercase:</strong> Changes all uppercase characters to lowercase.</li>
+        <li><strong>Remove Special Characters:</strong> Deletes characters like @, #, $, and others that are not
+          alphanumeric.</li>
+        <li><strong>Remove Numbers:</strong> Strips away all digits from the text.</li>
+        <li><strong>Remove Punctuation:</strong> Removes punctuation marks such as periods, commas, and question marks.
+        </li>
+        <li><strong>Remove Emojis:</strong> Clears all emojis from the text.</li>
+      </ul>
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <h2>Processing the Text</h2>
+      <h3>Truncate Text</h3>
+      <p>
+        After setting your preferences, click the "Truncate Text" button to apply the token limit. The processed text
+        will appear in the "Truncated Text" area.
+      </p>
+      <h3>Clean Text</h3>
+      <p>
+        Select the desired cleaning options and click the "Clean Text" button to apply those filters to the text in the
+        input area.
+      </p>
+    </section>
+
+    <footer class="text-center mt-5">
+      <p>&copy; 2024 Text Truncator with File Upload. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
